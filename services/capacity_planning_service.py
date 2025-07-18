@@ -12,9 +12,9 @@ class CapacityPlanningService:
         self,
         log_dir: str = ".logs",
         check_interval: int = 10,
-        initial_threshold: int = int(1024 * 1024 * 0.5 * 0.5),  # 0.5MB
+        initial_threshold: int = int(1024 * 1024 * 0.5 * 0.5 * 0.5 * 0.5),
         api_base_url: str = "http://localhost:8000",
-        capacity_check_time_window: int = 5,
+        capacity_check_time_window: int = 20,
     ):
         """
         Initialize capacity planning service.
@@ -28,6 +28,8 @@ class CapacityPlanningService:
         self.log_dir = log_dir
         self.check_interval = check_interval
         self.capacity_check_time_window = capacity_check_time_window
+        # This is a hack, ideally, we would monitor current and previous and initial threshold. Because scale up and scale down can 
+        # happen in a combination of sequences, we are only simulating a single scale up and sclae down
         self.initial_threshold = initial_threshold
         self.current_threshold = initial_threshold
         self.api_base_url = api_base_url
@@ -114,7 +116,7 @@ class CapacityPlanningService:
         logger.info("Starting large model spin-up (simulated 3 minutes)...")
         try:
             # Simulate 3-minute spin-up time
-            time.sleep(100)  # 100 seconds for demo
+            time.sleep(15)  # 15 seconds for demo
 
             # Update Redis to use large model
             success = redis_service.set_model("large-model")
@@ -136,8 +138,8 @@ class CapacityPlanningService:
         """Simulate spinning up small model (takes 20 seconds)."""
         logger.info("Starting small model spin-up (simulated 20 seconds)...")
         try:
-            # Simulate 20-second spin-up time
-            time.sleep(20)
+            # Simulate 4-second spin-up time
+            time.sleep(4)
 
             # Update Redis to use small model
             # There are edge cases here, basically we need to make sure that we only set it to small if the large model spin up has not been completed and updated before

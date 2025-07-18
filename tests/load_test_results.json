@@ -1,22 +1,22 @@
 [
   {
-    "test_name": "Simple Load Test (211 requests, 184s)",
-    "total_requests": 211,
-    "successful_requests": 56,
-    "failed_requests": 155,
-    "total_time": 184.12096,
-    "avg_response_time": 0.5358547203913684,
-    "min_response_time": 0.0013339519500732422,
-    "max_response_time": 2.0178377628326416,
-    "p95_response_time": 2.011251211166382,
-    "p99_response_time": 2.016448974609375,
-    "requests_per_second": 1.1459857693551023,
-    "error_rate": 0.7345971563981043,
-    "start_time": "2025-07-18T15:21:06.517467",
-    "end_time": "2025-07-18T15:24:10.638427",
+    "test_name": "Simple Load Test (85 requests, 186s)",
+    "total_requests": 85,
+    "successful_requests": 85,
+    "failed_requests": 0,
+    "total_time": 185.520253,
+    "avg_response_time": 1.8158619964824003,
+    "min_response_time": 1.0081439018249512,
+    "max_response_time": 2.052110195159912,
+    "p95_response_time": 2.0246732234954834,
+    "p99_response_time": 2.052110195159912,
+    "requests_per_second": 0.45817100087719265,
+    "error_rate": 0.0,
+    "start_time": "2025-07-18T16:03:02.188720",
+    "end_time": "2025-07-18T16:06:07.708973",
     "model_usage_stats": {
-      "large-model": 56,
-      "small-model": 0
+      "large-model": 68,
+      "small-model": 17
     }
   }
 ]
