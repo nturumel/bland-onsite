@@ -1,0 +1,19 @@
+[project]
+name = "fallback-routing"
+version = "0.1.0"
+description = "LLM Fallback Routing System with Redis, FastAPI, and Capacity Planning"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.116.1",
+    "uvicorn>=0.27.1",
+    "redis>=5.0.1",
+    "pydantic>=2.5.0",
+    "python-multipart>=0.0.6",
+    "loguru>=0.7.2",
+    "requests>=2.31.0",
+    "types-requests>=2.32.4.20250611",
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "httpx>=0.24.0",
+]

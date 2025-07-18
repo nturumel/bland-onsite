@@ -1,0 +1,22 @@
+[
+  {
+    "test_name": "Simple Load Test (211 requests, 184s)",
+    "total_requests": 211,
+    "successful_requests": 56,
+    "failed_requests": 155,
+    "total_time": 184.12096,
+    "avg_response_time": 0.5358547203913684,
+    "min_response_time": 0.0013339519500732422,
+    "max_response_time": 2.0178377628326416,
+    "p95_response_time": 2.011251211166382,
+    "p99_response_time": 2.016448974609375,
+    "requests_per_second": 1.1459857693551023,
+    "error_rate": 0.7345971563981043,
+    "start_time": "2025-07-18T15:21:06.517467",
+    "end_time": "2025-07-18T15:24:10.638427",
+    "model_usage_stats": {
+      "large-model": 56,
+      "small-model": 0
+    }
+  }
+]
